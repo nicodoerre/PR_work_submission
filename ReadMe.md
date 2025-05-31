@@ -16,7 +16,7 @@ To train the network, the train_edsr.py script is needed. This script enables th
 - `--pre_train`: Whether or not a previous trained model should be used to instantiate a higher scale model
 - `--frequency_loss`: Whether or not to use the combined loss discussd in the report
 
-Please note that default values are prvided in the script, but to use the pre training strategy in the paper, the pre_train flag needs to be expolicitly set. The same applies when using the combined loss (`--frequency_loss`).
+Please note that even though default values are provided in the script, the path to the dataset needs to be specified. To use the pre training strategy in the paper, the pre_train flag needs to be expolicitly set. The same applies when using the combined loss (`--frequency_loss`).
 
 ## How to showcase the model
 To generate outputs and to showcase the model, the `showcase.py` script must be used. Simply call it like this: `python showcase.py` with the additional arguments discussed below:  
