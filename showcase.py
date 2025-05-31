@@ -121,7 +121,7 @@ if __name__ == "__main__":
     parser.add_argument('--scale', type=int, default=2, help='Upscaling factor (e.g., 2, 4, 8)')
     parser.add_argument('--num_filters', type=int, default=256, help='Number of filters')
     parser.add_argument('--num_blocks', type=int, default=32, help='Number of residual blocks')
-    parser.add_argument('--dataset_path', type=str, default='C:/Users/nicol/Desktop/UNI/3.Master/MasterThesis/PracticalPart/data', help='Root path to dataset containing "train/" and "valid/" folders')
+    #parser.add_argument('--dataset_path', type=str, default='C:/Users/nicol/Desktop/UNI/3.Master/MasterThesis/PracticalPart/data', help='Root path to dataset containing "train/" and "valid/" folders')
     parser.add_argument('--comp_name', type=str, default='comparison.png', help='Name of the comparison image')
     parser.add_argument('--out_name', type=str, default='output.png', help='Name of the output image')
     parser.add_argument('--lr_name', type=str, default='lr_image.png', help='Name of the low-res image')
