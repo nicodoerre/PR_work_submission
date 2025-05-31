@@ -14,7 +14,7 @@ To train the network, the train_edsr.py script is needed. This script enables th
 - `--device`: The device the traingin should take place on
 - `--patience`: The number of epoch of which the training should be stopped if no decrease in validation loss is detected
 - `--pre_train`: Whether or not a previous trained model should be used to instantiate a higher scale model
-- `--frequency_loss`: Whether or not to use the combined loss discussd in the report
+- `--frequency_loss`: Whether or not to use the combined loss discussd in the report  
   Please note that default values are prvided in the script, but to use the pre training strategy in the paper, the pre_train flag needs to be expolicitly set. The same applies when using the combined loss (`--frequency_loss`).
 
 ## How to showcase the model
@@ -36,6 +36,6 @@ It should be noted that the `showcase.py` script outputs various images, namely:
 - `comparison plots`: Plots the low resolution, the ground truth and the super resolved image side by side with various evaluation metrics
 - `output`: A single super resolved image
 - `low resolution images`: The low resolution version of the image
-- `patches`: A side by side comparison of the low resolution, super resolved and ground truth patches  
+- `patches`: A side by side comparison of the low resolution, super resolved and ground truth patches    
 
 The overall workflow is that the image is split into smaller chunks which get super resolved individually. Then those super resolved image patches get stitched back together. Please note that while default values are provided, the location of the saved model needs to be specified. For the to-be-upscaled image, follow the specifications discussed above.
