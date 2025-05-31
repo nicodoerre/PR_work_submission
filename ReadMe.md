@@ -19,7 +19,7 @@ To train the network, the train_edsr.py script is needed. This script enables th
 
 ## How to showcase the model
 To generate outputs and to showcase the model, the `showcase.py` script must be used. Simply call it like this: `python showcase.py` with the additional arguments discussed below:  
-- `--model_path`: Thelocation under which the to be used model is saved
+- `--model_path`: The location under which the to be used model is saved
 - `--device`: The device the processing should take place on
 - `--img_path`: The path to the to be upscaled image. the image needs to be in a floder called `imgs` and in a subfolder called `ground_truth`. Otherwise it needs to be changed in the `main` function.
 - `--scale`: The scale of the upscaling
@@ -38,4 +38,4 @@ It should be noted that the `showcase.py` script outputs various images, namely:
 - `low resolution images`: The low resolution version of the image
 - `patches`: A side by side comparison of the low resolution, super resolved and ground truth patches  
 
-The overall workflow is that the image is split into smaller chunks which get super resolved individually. Then those super resolved image patches get stitched back together.
+The overall workflow is that the image is split into smaller chunks which get super resolved individually. Then those super resolved image patches get stitched back together. Please note that while default values are provided, the location of the saved model needs to be specified. For the to-be-upscaled image, follow the specifications discussed above.
