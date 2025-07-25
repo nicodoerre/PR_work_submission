@@ -3,7 +3,7 @@ This repository contains the code to obtain the results presented in the report 
 
 ## How to train the network
 To train the network, the train_edsr.py script is needed. This script enables the training of the EDSR network, either from scratch or with a pretrained file, with either the plain L1 loss or a combination of L1 and FSL loss presented in the report. Simply call it like this: `python train_edsr.py`. The script also features various command line arguments, which are listed below:  
-- `--dataset_path`: The root path to the dataset on which the model should be trained
+- `--dataset_path`: The root path to the dataset on which the model should be trained. Also, the directory must contain the dataset split intop training and validation sets with the name "train" and "valid".
 - `--scale`: The upscaling factor the model should be trained on. please note that it is beneficial to train models of x3 and x4 scales on the back of x2 scale models 
 - `--epochs`: Number of epochs the model should be trained
 - `--batch_size`: The size of the minibatch used during training
