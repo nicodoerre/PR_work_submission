@@ -1,5 +1,5 @@
 # How to use
-This repository contains the code to obtain the results presented in the report of the Practical Work. Here you can find the implementation of the EDSR network, as well as the necessary code to train it and showcase it. In the following sections, the individual scripts will be explained. Furthermore the necessary environment needs to be installed with the accompanying ``env.yml`` file. To do so, simply run `conda env create -f env.yml`. Please note that the used cuda version can differ, depending of the target system. The dataset can be downloaded [here](https://www.kaggle.com/datasets/soumikrakshit/div2k-high-resolution-images). The models used to create the showcased images are contained in a link to the Google Drive and will be shared upon request.
+This repository contains the code to obtain the results presented in the report of the Practical Work. Here you can find the implementation of the EDSR network, as well as the necessary code to train it and showcase it. In the following sections, the individual scripts will be explained. Furthermore the necessary environment needs to be installed with the accompanying ``env.yml`` file. To do so, simply run `conda env create -f env.yml`. Please note that the used cuda version can differ, depending of the target system. The dataset can be downloaded [here](https://www.kaggle.com/datasets/soumikrakshit/div2k-high-resolution-images). The models used to create the showcased images are contained in a link to the Google Drive and will be shared upon request. Also sometimes the `lpips` module needs to be installed manually with `pip install lpips`.
 
 ## How to train the network
 To train the network, the train_edsr.py script is needed. This script enables the training of the EDSR network, either from scratch or with a pretrained file, with either the plain L1 loss or a combination of L1 and FSL loss presented in the report. Simply call it like this: `python train_edsr.py`. The script also features various command line arguments, which are listed below:  
@@ -22,7 +22,7 @@ Please note that even though default values are provided in the script, the path
 To generate outputs and to showcase the model, the `showcase.py` script must be used. Simply call it like this: `python showcase.py` with the additional arguments discussed below:  
 - `--model_path`: The location under which the to be used model is saved
 - `--device`: The device the processing should take place on
-- `--img_path`: The path to the to be upscaled image. the image needs to be in a floder called `imgs` and in a subfolder called `ground_truth`. Otherwise it needs to be changed in the `main` function.
+- `--img_path`: The path to the to be upscaled image. The image needs to be in a folder called `imgs` and in a subfolder called `ground_truth`. Otherwise it needs to be changed in the `main` function. Additionally, there needs to be the folder `low_res` and `upscaled` present in the same directory as the `ground_truth` folder.
 - `--scale`: The scale of the upscaling
 - `--num_filters`: The learning rate used during training
 - `--num_filters`: The maximum number of filters for the convolutions
